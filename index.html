@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+        var input = document.getElementById("password");
+    // Execute a function when the user presses a key on the keyboard
+    input.addEventListener("keypress", function(event) {
+      // If the user presses the "Enter" key on the keyboard
+      if (event.key === "Enter") {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+        document.getElementById("button").click();
+      }
+    });
+        function display(form) {
+            if (form.username.value == "root") {
+                if (form.password.value == "root") {
+                    location = "page2.html"
+                } else {
+                    alert("Invalid Password")
+                }
+            } else {
+                alert("Invalid Username")
+            }
+        }
+    </script>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        html{
+            height: 100%;
+        }
+        body{
+            margin: 0px;
+            padding: 0px;
+            background: url('img2.jpeg');
+            height: auto;
+            font-family: 'Roboto', sans-serif;
+            font-family: 'Roboto Condensed', sans-serif;    
+        }
+        .left{
+            color: aliceblue;
+            display: inline;
+            position: absolute;
+            left: 10px;
+
+        }
+        .left img{
+            margin-left: 16px;
+            width: 56px;
+            margin-top: 10px;
+        }
+        .brand{
+            position: relative;
+            text-align: center;
+            line-height: 42px;
+            font-size: 29px;
+            display: inline;
+            bottom: 20px;
+            
+        }
+        .mid{  
+            text-align: center;
+            display: block;
+            width: 70%;
+            margin: 0px auto;
+            color: aliceblue;          
+            border-radius: 36px;
+            padding-top: 5px;
+        }
+        .right{
+            position: absolute;
+            top: 12px;
+            right: 10px;
+            display: inline;
+            color: aliceblue;
+        }
+        .navbar{
+            display: inline-block;
+        }
+        .navbar li{
+            font-size: 32px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+        .navbar li a{
+            color: white;
+            text-decoration: none;
+            padding: 10px 35px;
+        }
+        .navbar li a:hover, .navbar li a.active{
+            color: black;
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 20px;
+            transform: translateY(100px);
+        }
+        .btn a{
+            text-decoration: none;
+            color: white;
+        }
+        .btn{
+            font-family: 'Roboto', sans-serif;
+            font-family: 'Roboto Condensed', sans-serif;    
+            margin: 0px 9px;
+            padding: 3px 3px;
+            background-color: black;
+            border-radius: 10px;
+            font-size: large;
+            cursor: pointer;
+        }
+        .btn:hover{
+            background-color: red !important;
+        }
+        .container{
+            position: relative;
+            margin: 2px 2px;
+            padding: 2px 2px;
+            width: 40%;
+            top: 20px;
+            color: white;
+            border-radius: 2px;
+            text-align: center;
+        }
+        .int{
+            text-align: center;
+            display: block;
+            width: 460px;
+            height: 50px;
+            padding: 10px;
+            border: 2px solid gray;
+            margin: 30px auto;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+        #submit{
+            float: center;
+            position: relative;
+            top: 6px;
+        }
+        .container h1{
+            text-align: center;
+        }
+        #submit{
+            width: 460px;
+            height: 50px;
+            position: relative;
+            margin: auto auto;
+        }
+        header{
+            background-color: black;
+            height: 80px;
+        }
+        #b1{
+            background-color: black ;
+            color: white;
+            margin-top: 10px;
+        }
+        .navbar a{
+            transition: all .5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="left">
+            <a href="#"><img src="img1.jpeg" alt="logo" id="logo"></a>
+            <div class="brand">Health Planet</div>
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li> <a href="#">Home</a> </li>
+                <li> <a href="#">About Us</a> </li>
+                <li> <a href="#">Fitness Center</a> </li>
+                <li> <a href="#">Contact Us</a> </li>
+            </ul>
+        </div>
+        <div class="right">
+            <button class="btn" id="b1">
+                <a href="www.google.com">EXIT</a> 
+            </button>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Join the best gym in Delhi </h1>
+        <form action="noaction.php" class="form">
+            <div>
+                <input type="text" placeholder="Enter your name" class="int">
+            </div>
+            <div>
+                <input type="number" placeholder="Enter your age" class="int">
+            </div>
+            <div>
+                <input type="email" placeholder="Enter your email" class="int">
+            </div>
+            <div>
+                <input type="number" placeholder="months course" class="int">
+            </div>
+            <button class="btn" id="submit"> <a href="#">Submit</a></button>
+        </form>
+    </div>
+</body>
+</html>
